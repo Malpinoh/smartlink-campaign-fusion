@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import CreateSmartLink from "./pages/CreateSmartLink";
+import CreatePreSave from "./pages/CreatePreSave";
 import NotFound from "./pages/NotFound";
 
 // Create a new QueryClient instance
@@ -26,6 +27,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/create-smart-link" element={<CreateSmartLink />} />
+            <Route path="/create-pre-save" element={<CreatePreSave />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </TooltipProvider>
