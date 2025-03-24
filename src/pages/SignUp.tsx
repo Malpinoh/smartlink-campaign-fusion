@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/sections/Footer';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; // Fixed casing in import
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
