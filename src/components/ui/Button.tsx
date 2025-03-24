@@ -38,11 +38,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     if (href) {
+      // Use type assertion to avoid type errors when passing button props to anchor
       return (
         <a 
           href={href} 
           className={classes}
-          {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+          {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >
           {children}
         </a>
