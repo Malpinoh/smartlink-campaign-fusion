@@ -1,11 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Mock authentication state - in a real app this would come from an auth context
+  const isLoggedIn = false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,9 +44,15 @@ const Navbar: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button href="/sign-up" size="md" variant="primary">
-              Get Started
-            </Button>
+            {isLoggedIn ? (
+              <Button href="/dashboard" size="md" variant="primary">
+                Dashboard
+              </Button>
+            ) : (
+              <Button href="/sign-up" size="md" variant="primary">
+                Get Started
+              </Button>
+            )}
           </div>
 
           <button 
@@ -92,9 +102,15 @@ const Navbar: React.FC = () => {
               Pricing
             </a>
             <div className="pt-6">
-              <Button href="/sign-up" size="lg" variant="primary" fullWidth>
-                Get Started
-              </Button>
+              {isLoggedIn ? (
+                <Button href="/dashboard" size="lg" variant="primary" fullWidth>
+                  Dashboard
+                </Button>
+              ) : (
+                <Button href="/sign-up" size="lg" variant="primary" fullWidth>
+                  Get Started
+                </Button>
+              )}
             </div>
           </nav>
         </div>
