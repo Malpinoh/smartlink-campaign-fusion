@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
+import CreateSmartLink from "./pages/CreateSmartLink";
 import NotFound from "./pages/NotFound";
 
 // Create a new QueryClient instance
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/create-smart-link" element={<CreateSmartLink />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </TooltipProvider>
