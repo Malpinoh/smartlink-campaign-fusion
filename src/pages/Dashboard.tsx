@@ -8,7 +8,7 @@ import CampaignsList from '../components/dashboard/CampaignsList';
 import AnalyticsSummary from '../components/dashboard/AnalyticsSummary';
 import PaymentInstructions from '../components/dashboard/PaymentInstructions';
 import { Button } from '@/components/ui/button';
-import { PlusCircle, WhatsApp } from 'lucide-react';
+import { PlusCircle, MessageSquare } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   return (
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <WhatsApp className="h-4 w-4" />
+                    <MessageSquare className="h-4 w-4" />
                     Contact Support
                   </a>
                 </Button>

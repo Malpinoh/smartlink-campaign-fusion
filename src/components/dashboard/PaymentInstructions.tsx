@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Copy, ExternalLink, WhatsApp } from 'lucide-react';
+import { Copy, ExternalLink, MessageSquare } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -56,7 +56,7 @@ const PaymentInstructions: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <WhatsApp className="h-4 w-4" />
+            <MessageSquare className="h-4 w-4" />
             Send Payment Proof
           </a>
         </Button>
